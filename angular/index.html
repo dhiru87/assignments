@@ -1,0 +1,59 @@
+<html>
+   <head>
+   
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
+   </head>
+
+  <body ng-app="githubViewer" ng-controller="MainController">   
+    <!--
+
+    
+    <div>
+         {{message.length}}
+         {{name}}         
+    </div>
+  
+    <div>
+       <div>First Name : {{person.firstName}}</div>
+       <div>Last Name : {{person.lastName}}</div>
+      
+    </div>
+-->
+     <div>
+         {{error}}
+     </div>
+
+     {{username}}
+     
+     {{countdown}}
+
+    <form name="searchUser">
+        <input type="search" required placeholder="username to find" ng-model="username" />
+        <input type="submit" value="Search" ng-click="search(username)" >
+    </form>
+  
+    <!--
+     <div>
+         Name : {{user.name}}
+     </div>
+     <div>
+        Location : {{user.location}}
+    </div>
+     
+  
+ <div>
+          <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+       </div>
+    -->
+    
+    <!--    
+    <div ng-include="'userhtml.html'" ng-show="user"></div>
+    -->
+    <div>
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+    </div>
+  </body>
+</html>
