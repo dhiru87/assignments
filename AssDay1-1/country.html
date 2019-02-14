@@ -1,0 +1,48 @@
+<html>
+   <head>
+   
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
+   </head>
+
+  <body ng-app="countryInfo">   
+     <div ng-controller="countryController">
+         <div>
+                Country Name : {{country.nameOfCountry}}
+         </div>         
+         <div>
+                Capital : {{country.capitalOfCountry}}
+         </div>
+         <div>
+                <img ng-src="{{country.flagOfCountry}}" title="{{country.nameOfCountry}}" />
+        </div>
+        <div>
+                    Currency : {{country.currencyOfCountry}}
+        </div>
+
+
+        <div>
+            Countries List   
+        </div>
+        <div>
+           <table border="1">
+                <thead>
+                     <th>Country</th>  
+                     <th>Capital</th>
+                     <th>Currency</th>
+                     <th>Flag</th>
+                </thead>  
+                <tbody>
+                     <tr ng-repeat="c in CountriesList">
+                            <td>{{c.nameOfCountry}}</td>
+                            <td>{{c.capitalOfCountry}}</td>
+                            <td>{{c.currencyOfCountry}}</td>
+                            <td><img ng-src="{{c.flagOfCountry}}" title="{{c.nameOfCountry}}" /></td>
+                        </tr>    
+                </tbody>
+           </table>    
+        </div>
+     </div>
+  
+  </body>
+</html>
